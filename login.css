@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width:80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: blue;
+    font-size: 14px;
+}
+
+.links p {
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+/* Google and Facebook Buttons */
+.google, .facebook {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.google {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding-right: 30px;
+    margin-left: 30px;
+    
+    
+}
+
+.google img {
+    width: 20px;
+    height: 20px;
+}
+
+.facebook {
+    background: #1877f2;
+    color: white;
+    border: none;
+    margin-left: 30px;
+}
+
+.facebook img {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+}
