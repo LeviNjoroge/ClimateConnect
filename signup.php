@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root"; // Default for XAMPP
-$password = "0000"; // Default is empty
+$password = ""; // Default is empty
 $dbname = "ClimateConnect";
 
 // Create connection
@@ -59,6 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($conn->query($sql) === TRUE) {
         echo "Sign-up successful! <a href='login.html'>Login here</a>";
+        // call the index.html page
+        header("Location: index.html");
+        exit();
     } else {
         echo "Error: " . $conn->error;
     }
