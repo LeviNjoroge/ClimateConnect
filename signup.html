@@ -9,11 +9,15 @@
 <body>
     <div class="login-container">
         <h2>LOG IN</h2>
-        <input type="text" placeholder="Enter New Username" required>
-        <input type="email" placeholder="Enter Your Email" required>
-        <input type="password" placeholder="Enter Password" required>
-        <input type="password" placeholder="Confirm passowrd" required>
-        <button>SIGN UP</button>
+        <form action="signup.php" method="POST">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">SIGN UP</button>
+        </form>        
         <div class="links">
             <a href="#">Forgot Password?</a>
             <a href="login.html">You  have an account? Sign in</a>
