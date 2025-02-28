@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root"; // Default for XAMPP
-$password = ""; // Default is empty
+$password = "0000"; // Default is empty
 $dbname = "ClimateConnect";
 
 // Create connection
