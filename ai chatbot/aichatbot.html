@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate AI Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+        }
+        .chat-container {
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .messages {
+            height: 300px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .message {
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .user {
+            background: #00796b;
+            color: white;
+            align-self: flex-end;
+        }
+        .bot {
+            background: #eeeeee;
+            align-self: flex-start;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            cursor: pointer;
+            background: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <h2>🌍 Climate AI Chatbot 🌱</h2>
+        <div class="messages" id="chatBox"></div>
+        <input type="text" id="userInput" placeholder="Ask about climate change..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            const inputField = document.getElementById("userInput");
+            const message = inputField.value.trim();
+            if (!message) return;
+
+            const chatBox = document.getElementById("chatBox");
+            chatBox.innerHTML += `<div class="message user">${message}</div>`;
+
+            inputField.value = ""; 
+
+            try {
+                const response = await fetch("/ask", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ question: message }),
+                });
+
+                const data = await response.json();
+                chatBox.innerHTML += `<div class="message bot">${data.answer}</div>`;
+            } catch (error) {
+                chatBox.innerHTML += `<div class="message bot">❌ Error getting response</div>`;
+            }
+            
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>
