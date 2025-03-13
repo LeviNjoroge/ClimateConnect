@@ -1,4 +1,4 @@
 <?php
-exec('node ClimateConnectAI/app.js > /dev/null 2>&1 &');
+exec('start /B node ClimateConnectAI/app.js');
 header('Location: http://localhost:3000');
 ?>
