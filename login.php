@@ -9,20 +9,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($email) || empty($password)) {
         $error = "Please fill in all fields!";
     } else {
-        // Fetch user from database
-        $query = "SELECT * FROM users WHERE email = ?";
+        // Query to check both email and username
+        $query = "SELECT * FROM users WHERE email = ? OR username = ?";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param("s", $email);
+        $stmt->bind_param("ss", $input, $input);
         $stmt->execute();
         $result = $stmt->get_result();
-        
+
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
-            // Verify password - assumes passwords are stored with password_hash()
             if (password_verify($password, $user['password'])) {
+                // Store session variables
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
-                header("Location: dashboard.php");
+                header("Location: index.html"); // Redirect to the dashboard
                 exit();
             } else {
                 $error = "Invalid password!";
