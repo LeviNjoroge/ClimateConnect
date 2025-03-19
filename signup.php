@@ -59,3 +59,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>LOG IN</h2>
+        <form action="signup.php" method="POST">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">SIGN UP</button>
+        </form>        
+        <div class="links">
+            <a href="#">Forgot Password?</a>
+            <a href="login.html">You  have an account? Sign in</a>
+            <p>Continue with:</p>
+            <button class="google">
+                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo"> 
+                Sign in with Google
+            </button>
+            <button class="facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook logo"> 
+                Sign in with Facebook
+            </button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,26 +1,19 @@
-<?php
-// method -
-//connect to server -
-// take front end data -
-// push  to db
-//close connection
 
+<?php
 // Database configuration
 $servername = "localhost";
-$username = "root"; // Default for XAMPP
-$password = "0000"; // Default is empty
-$dbname = "ClimateConnect";
+$username = "root"; // Default username for XAMPP
+$password = "dency1234."; // Default password is empty
+$dbname = "climateconnect";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Don't echo connection status in production
-// echo "connection successful";
-
-// Don't process POST data here - move it to signup.php
+// Connection successful (Don't echo this in production)
+// echo "Connection successful";
 ?>

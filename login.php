@@ -1,18 +1,18 @@
 <?php
 session_start();
-require_once 'connection.php'; // Changed to require_once
+require_once 'connection.php'; // Ensure connection file is correctly included
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $input = trim($_POST['email']); // Can be email or username
     $password = $_POST['password'];
 
-    if (empty($email) || empty($password)) {
+    if (empty($input) || empty($password)) {
         $error = "Please fill in all fields!";
     } else {
-        // Query to check both email and username
+        // Query to check if input matches an email or username
         $query = "SELECT * FROM users WHERE email = ? OR username = ?";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param("ss", $input, $input);
+        $stmt->bind_param("ss", $input, $input); // Bind user input correctly
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Store session variables
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
-                header("Location: index.html"); // Redirect to the dashboard
+                header("Location: index.html"); // Redirect to a session-enabled page
                 exit();
             } else {
                 $error = "Invalid password!";
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="error"><?php echo $error; ?></div>
         <?php } ?>
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="email" placeholder="Email or Username" required> <!-- Accept both email & username -->
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">LOG IN</button>
         </form>
@@ -69,4 +69,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </body>
 </html>
-
