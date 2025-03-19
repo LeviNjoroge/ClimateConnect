@@ -1,3 +1,5 @@
+<?php include("chatbot.html"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

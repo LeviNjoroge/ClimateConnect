@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #chatbox { width: 60%; margin: 20px auto; padding: 10px; border: 1px solid #ddd; height: 400px; overflow-y: scroll; }
+        #userInput { width: 50%; padding: 10px; margin-top: 10px; }
+        #sendBtn { padding: 10px; }
+        .message { text-align: left; margin: 10px; padding: 5px; }
+        .user { color: blue; text-align: right; }
+        .bot { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+    <h2>ClimateConnect AI Chatbot</h2>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="Type your message...">
+    <button id="sendBtn">Send</button>
+
+    <script>
+        document.getElementById("sendBtn").addEventListener("click", sendMessage);
+        document.getElementById("userInput").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            let userText = document.getElementById("userInput").value;
+            if (!userText.trim()) return;
+
+            let chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += `<p class='message user'><strong>You:</strong> ${userText}</p>`;
+            document.getElementById("userInput").value = "";
+
+            // Add loading message
+            let loadingId = 'loading-' + Date.now();
+            chatbox.innerHTML += `<p id="${loadingId}" class='message bot'><strong>Bot:</strong> Thinking...</p>`;
+            chatbox.scrollTop = chatbox.scrollHeight;
+
+            fetch("scss/chatbot.php", {  // Updated path to match your directory structure
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Remove loading message
+                document.getElementById(loadingId).remove();
+                
+                let message = data.error ? `Error: ${data.reply}` : data.reply;
+                chatbox.innerHTML += `<p class='message bot'><strong>Bot:</strong> ${message}</p>`;
+                chatbox.scrollTop = chatbox.scrollHeight;
+            })
+            .catch(error => {
+                // Remove loading message
+                document.getElementById(loadingId).remove();
+                
+                console.error("Error:", error);
+                chatbox.innerHTML += `<p class='message bot error'><strong>Bot:</strong> Sorry, there was an error processing your request.</p>`;
+                chatbox.scrollTop = chatbox.scrollHeight;
+            });
+        }
+    </script>
+
+</body>
+</html>
