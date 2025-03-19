@@ -6,17 +6,17 @@
 //close connection
 
 // Database configuration
-$server = 'localhost';
-$username = "root";
-$password = "dency1234.";
-$database = "climateconnect";
+$servername = "localhost";
+$username = "root"; // Default for XAMPP
+$password = "0000"; // Default is empty
+$dbname = "ClimateConnect";
 
 // Create connection
-$conn = mysqli_connect($server, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password);
 
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 // Don't echo connection status in production
