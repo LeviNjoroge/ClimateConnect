@@ -194,8 +194,11 @@ if (!isset($_SESSION['user_id'])) {
             <!-- Navbar End -->
 
 <!-- hero -->
-<h1 class="text-primary fw-bold">Welcome to Climate Connect</h1>
-<p class="lead text-secondary">Protect our Planet, Preserve our Future</p>
+<!-- hero -->
+<div class="text-center mb-4">
+    <h1 class="text-primary fw-bold">Welcome to Climate Connect</h1>
+    <p class="lead text-secondary">Protect our Planet, Preserve our Future</p>
+</div>
 
 <div class="container-fluid pt-4 px-4">
     <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
@@ -228,51 +231,49 @@ if (!isset($_SESSION['user_id'])) {
 </div>
 
 <!-- content start -->
-<div class="mt-5 text-start">
-    <h2 class="fw-bold">About ClimateConnect</h2>
-    <p>
-        ClimateConnect is an AI-powered educational and social platform addressing climate change. 
-        Our goal is to increase public awareness, hold industries accountable, and encourage meaningful action. 
-        We provide real-time climate data, emissions tracking, and interactive learning tools to empower individuals and organizations.
-    </p>
-    <h3 class="text-success fw-bold">The Problem</h3>
-    <p>
-        Climate change remains a critical issue, yet public awareness is limited. Existing platforms lack real-time data and interactive engagement.
-        Industries, major contributors to carbon emissions, often lack transparency, making it difficult to track their environmental impact.
-    </p>
-    <h3 class="text-primary fw-bold">Our Solution</h3>
-    <ul>
-        <li>AI-driven learning modules on climate change.</li>
-        <li>Real-time climate data on emissions, deforestation, and extreme weather.</li>
-        <li>Industry emissions monitoring with dashboards and sustainability rankings.</li>
-        <li>Interactive discussions and corporate pledge tracking.</li>
-        <li>AI chatbot assistance for climate-related queries.</li>
-    </ul>
-    <h3 class="text-warning fw-bold">Aligned with UN Sustainable Development Goals (SDGs)</h3>
-    <ul>
-        <li>SDG 13: Climate Action</li>
-        <li>SDG 12: Responsible Consumption and Production</li>
-        <li>SDG 7: Affordable and Clean Energy</li>
-        <li>SDG 11: Sustainable Cities and Communities</li>
-    </ul>
-    <p>
-        By leveraging AI, real-time data, and community engagement, ClimateConnect empowers individuals, industries, and policymakers 
-        to take informed actions against climate change.
-    </p>
+<div class="container-fluid pt-4 px-4 mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+            <h2 class="fw-bold">About ClimateConnect</h2>
+            <p>
+                ClimateConnect is an AI-powered educational and social platform addressing climate change. 
+                Our goal is to increase public awareness, hold industries accountable, and encourage meaningful action. 
+                We provide real-time climate data, emissions tracking, and interactive learning tools to empower individuals and organizations.
+            </p>
+            <h3 class="text-success fw-bold">The Problem</h3>
+            <p>
+                Climate change remains a critical issue, yet public awareness is limited. Existing platforms lack real-time data and interactive engagement.
+                Industries, major contributors to carbon emissions, often lack transparency, making it difficult to track their environmental impact.
+            </p>
+            <h3 class="text-primary fw-bold">Our Solution</h3>
+            <ul class="list-unstyled">
+                <li>AI-driven learning modules on climate change.</li>
+                <li>Real-time climate data on emissions, deforestation, and extreme weather.</li>
+                <li>Industry emissions monitoring with dashboards and sustainability rankings.</li>
+                <li>Interactive discussions and corporate pledge tracking.</li>
+                <li>AI chatbot assistance for climate-related queries.</li>
+            </ul>
+            <h3 class="text-warning fw-bold">Aligned with UN Sustainable Development Goals (SDGs)</h3>
+            <ul class="list-unstyled">
+                <li>SDG 13: Climate Action</li>
+                <li>SDG 12: Responsible Consumption and Production</li>
+                <li>SDG 7: Affordable and Clean Energy</li>
+                <li>SDG 11: Sustainable Cities and Communities</li>
+            </ul>
+            <p>
+                By leveraging AI, real-time data, and community engagement, ClimateConnect empowers individuals, industries, and policymakers 
+                to take informed actions against climate change.
+            </p>
+        </div>
+    </div>
 </div>
 <!-- content end -->
-
-<!-- Sales Chart End -->
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                            &copy;<a href="#">ClimateConnect</a>, All Right Reserved. 
                         </div>
                     </div>
                 </div>

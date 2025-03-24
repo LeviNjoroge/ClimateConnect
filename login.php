@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Store session variables
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
-                header("Location: index.html"); // Redirect to a session-enabled page
+                header("Location: index.php"); // Redirect to a session-enabled page
                 exit();
             } else {
                 $error = "Invalid password!";

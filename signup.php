@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($sql) === TRUE) {
         echo "Sign-up successful! <a href='login.html'>Login here</a>";
         // call the index.html page
-        header("Location: index.html");
+        header("Location: index.php");
         exit();
     } else {
         echo "Error: " . $conn->error;
