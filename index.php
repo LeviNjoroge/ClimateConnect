@@ -194,81 +194,212 @@ if (!isset($_SESSION['user_id'])) {
             <!-- Navbar End -->
 
 <!-- hero -->
-<!-- hero -->
 <div class="text-center mb-4">
     <h1 class="text-primary fw-bold">Welcome to Climate Connect</h1>
     <p class="lead text-secondary">Protect our Planet, Preserve our Future</p>
 </div>
 
 <div class="container-fluid pt-4 px-4">
-    <div id="salesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2000">
-                <img src="img/climate4.jpg" class="d-block w-100" 
-                     style="max-height: 570px; width: auto; aspect-ratio: 16/9; object-fit: cover;border-radius: 15px;" 
-                     alt="Worldwide Sales">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="img/climate3.jpg" class="d-block w-100" 
-                     style="max-height: 570px; width: auto; aspect-ratio: 16/9; object-fit: cover;border-radius: 15px;" 
-                     alt="Sales & Revenue">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="img/climate2.jpg" class="d-block w-100" 
-                     style="max-height: 570px; width: auto; aspect-ratio: 16/9; object-fit: cover;border-radius: 15px;" 
-                     alt="Market Trends">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div id="salesCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#salesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded-4 overflow-hidden">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div class="overlay-container">
+                            <img src="img/climate4.jpg" class="d-block w-100" 
+                                style="height: 500px; object-fit: cover;" 
+                                alt="Climate Impact">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                                <h5>Climate Action Matters</h5>
+                                <p>Join the movement to protect our planet's future</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="overlay-container">
+                            <img src="img/climate3.jpg" class="d-block w-100" 
+                                style="height: 500px; object-fit: cover;" 
+                                alt="Sustainable Solutions">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                                <h5>Sustainable Solutions</h5>
+                                <p>Discover innovative approaches to environmental challenges</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="overlay-container">
+                            <img src="img/climate2.jpg" class="d-block w-100" 
+                                style="height: 500px; object-fit: cover;" 
+                                alt="Global Collaboration">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                                <h5>Global Collaboration</h5>
+                                <p>Working together for a sustainable future</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#salesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#salesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#salesCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#salesCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </div>
 
 <!-- content start -->
-<div class="container-fluid pt-4 px-4 mt-5">
+<div class="container-fluid pt-5 px-4 mt-4">
     <div class="row justify-content-center">
-        <div >
-            <h2 class="fw-bold">About ClimateConnect</h2>
-            <p>
-                ClimateConnect is an AI-powered educational and social platform addressing climate change. 
-                Our goal is to increase public awareness, hold industries accountable, and encourage meaningful action. 
-                We provide real-time climate data, emissions tracking, and interactive learning tools to empower individuals and organizations.
-            </p>
-            <h3 class="text-success fw-bold">The Problem</h3>
-            <p>
-                Climate change remains a critical issue, yet public awareness is limited. Existing platforms lack real-time data and interactive engagement.
-                Industries, major contributors to carbon emissions, often lack transparency, making it difficult to track their environmental impact.
-            </p>
-            <h3 class="text-primary fw-bold">Our Solution</h3>
-            <ul class="list-unstyled">
-                <li>AI-driven learning modules on climate change.</li>
-                <li>Real-time climate data on emissions, deforestation, and extreme weather.</li>
-                <li>Industry emissions monitoring with dashboards and sustainability rankings.</li>
-                <li>Interactive discussions and corporate pledge tracking.</li>
-                <li>AI chatbot assistance for climate-related queries.</li>
-            </ul>
-            <h3 class="text-warning fw-bold">Aligned with UN Sustainable Development Goals (SDGs)</h3>
-            <ul class="list-unstyled">
-                <li>SDG 13: Climate Action</li>
-                <li>SDG 12: Responsible Consumption and Production</li>
-                <li>SDG 7: Affordable and Clean Energy</li>
-                <li>SDG 11: Sustainable Cities and Communities</li>
-            </ul>
-            <p>
-                By leveraging AI, real-time data, and community engagement, ClimateConnect empowers individuals, industries, and policymakers 
-                to take informed actions against climate change.
-            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-lg-10">
+            <div class="bg-light rounded-4 p-5 shadow-sm">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold text-primary">About ClimateConnect</h2>
+                    <div class="d-inline-block border-bottom border-primary border-2 mb-3" style="width: 100px;"></div>
+                    <p class="lead">
+                        ClimateConnect is an AI-powered educational and social platform addressing climate change. 
+                        Our goal is to increase public awareness, hold industries accountable, and encourage meaningful action. 
+                        We provide real-time climate data, emissions tracking, and interactive learning tools to empower individuals and organizations.
+                    </p>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="rounded-circle bg-danger bg-opacity-10 p-3 d-inline-block mb-3">
+                                    <i class="fa fa-exclamation-triangle text-danger fa-2x"></i>
+                                </div>
+                                <h3 class="text-danger fw-bold h4">The Problem</h3>
+                                <p>
+                                    Climate change remains a critical issue, yet public awareness is limited. Existing platforms lack real-time data and interactive engagement.
+                                    Industries, major contributors to carbon emissions, often lack transparency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-block mb-3">
+                                    <i class="fa fa-lightbulb text-primary fa-2x"></i>
+                                </div>
+                                <h3 class="text-primary fw-bold h4">Our Solution</h3>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fa fa-check-circle text-success me-2"></i>AI-driven learning modules</li>
+                                    <li><i class="fa fa-check-circle text-success me-2"></i>Real-time climate data</li>
+                                    <li><i class="fa fa-check-circle text-success me-2"></i>Industry emissions monitoring</li>
+                                    <li><i class="fa fa-check-circle text-success me-2"></i>Interactive discussions</li>
+                                    <li><i class="fa fa-check-circle text-success me-2"></i>AI chatbot assistance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="rounded-circle bg-success bg-opacity-10 p-3 d-inline-block mb-3">
+                                    <i class="fa fa-globe text-success fa-2x"></i>
+                                </div>
+                                <h3 class="text-success fw-bold h4">UN SDG Alignment</h3>
+                                <ul class="list-unstyled text-start">
+                                    <li><i class="fa fa-leaf text-success me-2"></i>SDG 13: Climate Action</li>
+                                    <li><i class="fa fa-recycle text-success me-2"></i>SDG 12: Responsible Consumption</li>
+                                    <li><i class="fa fa-bolt text-success me-2"></i>SDG 7: Clean Energy</li>
+                                    <li><i class="fa fa-city text-success me-2"></i>SDG 11: Sustainable Cities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <p class="lead fw-bold text-primary">
+                        By leveraging AI, real-time data, and community engagement, ClimateConnect empowers individuals, industries, and policymakers 
+                        to take informed actions against climate change.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-lg mt-3 px-4 rounded-pill">Join The Movement</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <!-- content end -->
-            <!-- Footer Start -->
+
+<style>
+.carousel-item img {
+    transition: transform 0.5s ease;
+}
+
+.carousel:hover .carousel-item img {
+    transform: scale(1.03);
+}
+
+.overlay-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-caption {
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+}
+
+.rounded-4 {
+    border-radius: 0.75rem !important;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.75rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+</style>            <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
