@@ -232,8 +232,8 @@ if (!isset($_SESSION['user_id'])) {
 
 <!-- content start -->
 <div class="container-fluid pt-4 px-4 mt-5">
-    <div >
-        <div class="col-lg-10 text-center">
+    <div class="row justify-content-center">
+        <div >
             <h2 class="fw-bold">About ClimateConnect</h2>
             <p>
                 ClimateConnect is an AI-powered educational and social platform addressing climate change. 
