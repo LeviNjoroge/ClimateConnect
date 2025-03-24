@@ -1,0 +1,33 @@
+.climate-card {
+    transition: transform 0.2s;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.climate-card:hover {
+    transform: translateY(-5px);
+}
+
+.carousel-item img {
+    filter: brightness(0.9);
+    transition: filter 0.3s;
+}
+
+.about-section {
+    padding: 3rem;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.nav-item:hover {
+    background: rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
