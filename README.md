@@ -89,18 +89,34 @@ npm start
 
 ```
 ClimateConnect/
-├── app/
-│   ├── controllers/
-│   ├── models/
-│   └── views/
+├── ClimateConnectAI/
+│   ├── components/
+│   ├── public/
+│   │   ├── css/
+│   │   ├── img/
+│   │   ├── js/
+│   │   ├── lib/
+│   │   │   ├── chart/
+│   │   │   ├── easing/
+│   │   │   ├── owlcarousel/
+│   │   │   ├── tempusdominus/
+│   │   │   └── waypoints/
+│   │   └── scss/
+├── css/
+├── docs/
+├── edu/
+├── img/
+├── js/
+├── lib/
+│   ├── chart/
+│   ├── easing/
+│   ├── owlcarousel/
+│   ├── tempusdominus/
+│   └── waypoints/
+├── Otherfiles/
 ├── public/
-│   ├── css/
-│   ├── js/
-│   ├── lib/
-│   └── img/
-├── database/
-├── config/
-└── docs/
+└── scss/
+    └── bootstrap/
 ```
 
 ## Features Usage 💡
