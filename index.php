@@ -73,7 +73,7 @@ if (!isset($_SESSION['user_id'])) {
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-book me-2 text-warning"></i>Learning</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="education.html" class="dropdown-item">Learning Modules</a>
+                    <a href="edu/0.0 index.html" class="dropdown-item">Learning Modules</a>
                 </div>
             </div>
             <a href="climate-data.html" class="nav-item nav-link"><i class="fa fa-industry me-2 text-danger"></i> Industrial Data</a>
