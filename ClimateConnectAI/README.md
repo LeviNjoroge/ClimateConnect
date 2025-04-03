@@ -74,7 +74,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - Google Gemini AI for providing the AI capabilities
 - Climate data sources and environmental organizations
 - Open-source community contributors
-
-## Screenshots 📸
-
-[Add your application screenshots here]
