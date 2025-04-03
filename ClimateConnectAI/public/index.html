@@ -31,38 +31,82 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Add mobile-specific CSS -->
+    <style>
+        @media (max-width: 768px) {
+            .chat-container {
+                width: 95%;
+                margin: 10px auto;
+                height: 80vh;
+            }
+            
+            .input-area {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+                background: #fff;
+            }
+            
+            #user-input {
+                width: 75%;
+                padding: 12px;
+            }
+            
+            #send-btn {
+                width: 20%;
+                padding: 12px;
+            }
+            
+            header h1 {
+                font-size: 24px;
+                padding: 10px;
+            }
+            
+            header p {
+                font-size: 16px;
+            }
+            
+            .messages {
+                height: calc(80vh - 120px);
+                padding-bottom: 60px;
+            }
+        }
+    </style>
 </head>
 
 <body>
             <!-- Blank Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-light rounded align-items-center justify-content-center mx-0">
-                    
-                    <div class="container">
-                        <header>
-                            <h1>ClimateConnect AI</h1>
-                            <p>Your Intelligent Climate Change Assistant</p>
-                        </header>
-                        
-                        <div class="chat-container">
-                            <div id="chat-messages" class="messages"></div>
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="container">
+                            <header class="text-center py-3">
+                                <h1>ClimateConnect AI</h1>
+                                <p>Your Intelligent Climate Change Assistant</p>
+                            </header>
                             
-                            <div class="typing-indicator" style="display: none;">
-                                <div class="typing-dot"></div>
-                                <div class="typing-dot"></div>
-                                <div class="typing-dot"></div>
-                            </div>
-                            
-                            <div class="input-area">
-                                <input type="text" id="user-input" placeholder="Ask about climate change...">
-                                <button id="send-btn">Send</button>
+                            <div class="chat-container">
+                                <div id="chat-messages" class="messages"></div>
+                                
+                                <div class="typing-indicator" style="display: none;">
+                                    <div class="typing-dot"></div>
+                                    <div class="typing-dot"></div>
+                                    <div class="typing-dot"></div>
+                                </div>
+                                
+                                <div class="input-area">
+                                    <input type="text" id="user-input" placeholder="Ask about climate change...">
+                                    <button id="send-btn" class="btn btn-primary">Send</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <script src="script.js"></script>  
                 </div>   
-                      
-                
             </div>
             <!-- Blank End -->
         </div>
