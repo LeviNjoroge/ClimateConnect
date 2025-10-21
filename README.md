@@ -98,8 +98,6 @@ ClimateConnect/
 │   │   │   ├── chart/
 │   │   │   ├── easing/
 │   │   │   ├── owlcarousel/
-│   │   │   ├── tempusdominus/
-│   │   │   └── waypoints/
 │   │   └── scss/
 ├── css/
 ├── docs/
