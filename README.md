@@ -32,7 +32,6 @@ A comprehensive climate change platform that combines AI-powered assistance, use
 - jQuery
 - Chart.js
 - Owl Carousel
-- Tempus Dominus
 - Font Awesome
 
 ### Backend
